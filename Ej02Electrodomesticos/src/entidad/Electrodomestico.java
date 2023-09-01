@@ -5,11 +5,11 @@ import enumeraciones.ConsumoEnergetico;
 import java.util.Scanner;
 
 public class Electrodomestico {
-    private double precio;
-    private String color;
-    private Character consumoEnergetico;
-    private double peso;
-    Scanner scan = new Scanner(System.in).useDelimiter("\n");
+    protected double precio;
+    protected String color;
+    protected Character consumoEnergetico;
+    protected double peso;
+    protected Scanner scan = new Scanner(System.in).useDelimiter("\n");
 
     public Electrodomestico() {
     }
@@ -53,6 +53,7 @@ public class Electrodomestico {
         this.peso = peso;
     }
     public char comprobarConsumoEnergetico(Character letra){
+        letra = Character.toTitleCase(letra);
         if(letra!='A' && letra!='B' && letra!='C' && letra !='D' && letra!='E'){
             return 'F';
         }else{
