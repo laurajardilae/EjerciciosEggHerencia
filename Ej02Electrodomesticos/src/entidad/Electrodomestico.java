@@ -5,7 +5,7 @@ import enumeraciones.ConsumoEnergetico;
 import java.util.Scanner;
 
 public class Electrodomestico {
-    protected double precio;
+    protected double precio=1000;
     protected String color;
     protected Character consumoEnergetico;
     protected double peso;
@@ -14,8 +14,7 @@ public class Electrodomestico {
     public Electrodomestico() {
     }
 
-    public Electrodomestico(double precio, String color, char consumoEnergetico, double peso) {
-        this.precio = precio;
+    public Electrodomestico(String color, char consumoEnergetico, double peso) {
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
         this.peso = peso;
@@ -54,7 +53,7 @@ public class Electrodomestico {
     }
     public char comprobarConsumoEnergetico(Character letra){
         letra = Character.toTitleCase(letra);
-        if(letra!='A' && letra!='B' && letra!='C' && letra !='D' && letra!='E'){
+        if(letra!='A' && letra!='B' && letra!='C' && letra !='D' && letra!='E' && letra!='F'){
             return 'F';
         }else{
             return letra;
@@ -69,7 +68,7 @@ public class Electrodomestico {
         }
     }
     public void crearElectrodomestico(){
-        precio = 1000;
+        //precio = 1000;
         System.out.println("Ingrese el color del electrodoméstico: ");
         color = comprobarColor(scan.next());
         System.out.println("Ingrese el consumo energético del electrodoméstico: ");
@@ -80,7 +79,7 @@ public class Electrodomestico {
     public void precioFinal(){
         if(peso>=1&&peso<=19){
             precio+=100;
-        } else if (peso>=20&&peso<=49) {
+        }else if (peso>=20&&peso<=49) {
             precio+=500;
         }else if (peso>=50&&peso<=79) {
             precio+=800;
@@ -90,7 +89,7 @@ public class Electrodomestico {
 
         if(consumoEnergetico.equals('A')){
             precio+=1000;
-        } else if (consumoEnergetico.equals('B')) {
+        }else if (consumoEnergetico.equals('B')) {
             precio+=800;
         }else if (consumoEnergetico.equals('C')) {
             precio+=600;

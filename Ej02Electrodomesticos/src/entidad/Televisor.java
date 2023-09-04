@@ -7,10 +7,11 @@ public class Televisor extends Electrodomestico{
     public Televisor() {
     }
 
-    public Televisor(double precio, String color, char consumoEnergetico, double peso, double resolucion, boolean tdt) {
-        super(precio, color, consumoEnergetico, peso);
+    public Televisor(String color, char consumoEnergetico, double peso, double resolucion, boolean tdt) {
+        super(color, consumoEnergetico, peso);
         this.resolucion = resolucion;
         this.tdt = tdt;
+        precioFinal();
     }
 
     public double getResolucion() {

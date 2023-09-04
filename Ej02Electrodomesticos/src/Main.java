@@ -2,23 +2,40 @@ import entidad.Electrodomestico;
 import entidad.Lavadora;
 import entidad.Televisor;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-       /* Electrodomestico electrodomestico1 = new Electrodomestico();
-        electrodomestico1.crearElectrodomestico();
-        electrodomestico1.precioFinal();
-        System.out.println(electrodomestico1.toString());*/
-        System.out.println("---LAVADORA---");
-        Lavadora lavadora1 = new Lavadora();
+
+        /*System.out.println("---LAVADORA---");
+        Electrodomestico lavadora1 = new Lavadora();
         lavadora1.crearLavadora();
         System.out.println(lavadora1.toString());
 
         System.out.println("---TELEVISOR---");
         Televisor televisor1 = new Televisor();
         televisor1.crearTelevisor();
-        System.out.println(televisor1.toString());
+        System.out.println(televisor1.toString());*/
+
+        Lavadora lavadora1 = new Lavadora("blanco",'A',40,40);
+        Lavadora lavadora2 = new Lavadora("azul",'C',10,10);
+        Televisor televisor1 = new Televisor("negro",'F',10,10,false);
+        Televisor televisor2 = new Televisor("negro",'B',50,10,true);
+
+        double total = 0;
+        ArrayList<Electrodomestico> lista = new ArrayList<>();
+        lista.add(lavadora1);
+        lista.add(lavadora2);
+        lista.add(televisor1);
+        lista.add(televisor2);
+
+        for (Electrodomestico elec: lista) {
+            System.out.println(elec.toString());
+            total+=elec.getPrecio();
+        }
+        System.out.println("El total es: " + total);
+
 
     }
 }

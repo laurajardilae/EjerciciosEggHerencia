@@ -8,9 +8,10 @@ public class Lavadora extends Electrodomestico{
     public Lavadora() {
     }
 
-    public Lavadora(double precio, String color, char consumoEnergetico, double peso, int carga) {
-        super(precio, color, consumoEnergetico, peso); //este es el contructor que va a heredar del padre
+    public Lavadora(String color, char consumoEnergetico, double peso, int carga) {
+        super(color, consumoEnergetico, peso); //este es el contructor que va a heredar del padre
         this.carga = carga;
+        precioFinal();
     }
 
     public int getCarga() {
@@ -31,7 +32,6 @@ public class Lavadora extends Electrodomestico{
         super.precioFinal();
         if(carga>30){
             precio+=500;
-
         }
     }
 
