@@ -9,6 +9,14 @@ public class Circulo extends Formas implements calculosFormas{
         this.radio = radio;
     }
 
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+
     public void calcularArea(){
         area = pifinal * Math.pow(radio, 2);
     }
@@ -20,6 +28,7 @@ public class Circulo extends Formas implements calculosFormas{
         calcularArea();
         calcularPerimetro();
     }
+
 
     @Override
     public String toString() {

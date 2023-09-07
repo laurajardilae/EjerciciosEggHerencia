@@ -51,7 +51,7 @@ public class Electrodomestico {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-    public char comprobarConsumoEnergetico(Character letra){
+    public Character comprobarConsumoEnergetico(Character letra){
         letra = Character.toTitleCase(letra);
         if(letra!='A' && letra!='B' && letra!='C' && letra !='D' && letra!='E' && letra!='F'){
             return 'F';
@@ -68,7 +68,6 @@ public class Electrodomestico {
         }
     }
     public void crearElectrodomestico(){
-        //precio = 1000;
         System.out.println("Ingrese el color del electrodoméstico: ");
         color = comprobarColor(scan.next());
         System.out.println("Ingrese el consumo energético del electrodoméstico: ");
